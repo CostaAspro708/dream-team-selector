@@ -50,7 +50,6 @@ export function CharacterSearch(){
            let buffer = [...positionSelected];
            buffer[3] = input;
            SetPositionSelected(buffer);
-           console.log(positionSelected);
         }
     return (
             <div>
