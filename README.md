@@ -7,7 +7,7 @@ The MARVEL API can be found at https://developer.marvel.com/
 ## Getting Started
 
 In the project directory, run:
-1.## 'npm i' to install dependencies.
+1. ### 'npm i' to install dependencies.
 2. ### `npm start`
 
 Runs the app in the development mode.
