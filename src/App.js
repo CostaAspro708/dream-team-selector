@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from "react";
+import { useCharacters } from "./api.js";
+import { CharacterSearch } from "./characters.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="header">
+      <h1>Marvel Dream Team Selector</h1>
+      <p>Select characters by clicking the position container then clicking the name of the character on the left</p>
+    </div>
+      <div>
+        <CharacterSearch/>
+      </div>
     </div>
   );
 }

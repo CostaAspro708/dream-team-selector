@@ -1,18 +1,65 @@
-.App {
-  text-align: center;
+.header {
+  padding: 5px;
+  text-align: left;
+  background: #1abc9c;
+  color: white;
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Selector {
+
+     width: 50%;
+     margin-left: auto;
+     margin-right: auto;
+}
+.Soccer {
+
+      padding: 2rem 2rem;
+      text-align: center;
+}
+.Search {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: top;
+
+}
+.soccerBackground {
+    background-image: url('./img/soccer-field.jpg');
+    width: 667px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    display: inline-block;
+      padding: 1rem 1rem;
+      vertical-align: top;
+}
+#Defender{
+    margin-top:50px;
+}
+#Striker{
+    margin-top:200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Players {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 140px;
+     border-radius: 10px;
+   background-color: #fff;
+   background-color: rgba(255,255,255,0.5);
+}
+.CharacterList {
+    list-style-type: none;
+    text-align: left;
+    cursor: pointer;
+
 }
 
+#dropdown {
+    display: inline-block;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +71,3 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
