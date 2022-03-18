@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import { useCharacters } from "./api.js";
 
 export function CharacterSearch(){
@@ -78,7 +78,7 @@ export function CharacterSearch(){
 //            props.name the name of a character
 function Players(props){
     const thumbnailUrl = props.thumbnail;
-    if(thumbnailUrl.length == 0){
+    if(thumbnailUrl.length === 0){
         return(
         <div>
                                    {props.character}<br />
@@ -88,9 +88,7 @@ function Players(props){
     return(
                        <div>
                            {props.character}<br />
-                           <img
-                                 src={props.thumbnail+"/portrait_small.jpg"}
-                                 />
+                           <img alt="football_field" src={props.thumbnail+"/portrait_small.jpg"}/>
                        </div>
                    );
 

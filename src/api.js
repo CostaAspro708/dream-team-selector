@@ -3,15 +3,7 @@ import {useState, useEffect} from "react";
 const API_PUBLIC_KEY = "803d9f7c29069a049f60fb2588e1266f";
 const API_PRIVATE_KEY = "224531fd4ee73adddf727ca69b78a1765ec6efbd";
 
-//Creates a hash that is used to call the marvel api.
-//Parameters, public key, private key
-//Returns, hash for marvel API.
-function createHash(public_key, private_key){
-    const currentDate = new Date();
-    var timestamp = String(currentDate.getTime());
-    var API_HASH_KEY = md5(timestamp + private_key + public_key);
-    return API_HASH_KEY;
-}
+
 
 //A function that calls the MARVEL API.
 //Parameters, Optional parameter string startsWith used for searching for characters that start with the variable startsWith.
@@ -19,8 +11,9 @@ function getCharacters(startsWith){
     const currentDate = new Date();
     var URL = "";
     var timestamp = String(currentDate.getTime());
+    //Creates a hash that is used to call the marvel api.
     var API_HASH_KEY = md5(timestamp + API_PRIVATE_KEY + API_PUBLIC_KEY);
-    if (startsWith == null || startsWith.length == 0){
+    if (startsWith == null || startsWith.length === 0){
         URL = "http://gateway.marvel.com/v1/public/characters?ts="+timestamp+"&apikey="+API_PUBLIC_KEY+"&hash="+API_HASH_KEY;
     }else{
         URL = "http://gateway.marvel.com/v1/public/characters?nameStartsWith="+startsWith+"&ts="+timestamp+"&apikey="+API_PUBLIC_KEY+"&hash="+API_HASH_KEY;
