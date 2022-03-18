@@ -1,6 +1,4 @@
 import './App.css';
-import {useState, useEffect} from "react";
-import { useCharacters } from "./api.js";
 import { CharacterSearch } from "./characters.js";
 
 function App() {
